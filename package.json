@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pixelize-engine": "^0.1.1"
+    "pixelize-engine": "^1.1.2"
   }
 }
