@@ -1,3 +1,4 @@
+import "pixelize-engine";
 import "./sprites";
 
 game.update = () => {
