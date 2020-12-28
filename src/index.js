@@ -1,7 +1,4 @@
-import setUpGame from "pixelize-engine";
-import "./sprites";
-
-const game = setUpGame();
+import game from "./sprites";
 
 game.update = () => {
   // Put the code to update your game here.
@@ -10,4 +7,5 @@ game.update = () => {
 game.draw = () => {
   // Put the code to draw you game board here.
   game.sprite("mark", 46, 46);
+  game.sprite("mark", 60, 60);
 };
