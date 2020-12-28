@@ -1,5 +1,7 @@
-import "pixelize-engine";
+import setUpGame from "pixelize-engine";
 import "./sprites";
+
+const game = setUpGame();
 
 game.update = () => {
   // Put the code to update your game here.
