@@ -1,3 +1,5 @@
+import "./sprites";
+
 game.update = () => {
   // Put the code to update your game here.
 };
