@@ -1,17 +1,25 @@
 import resolve from "rollup-plugin-node-resolve";
 import babel from "rollup-plugin-babel";
+import commonjs from "@rollup/plugin-commonjs";
+import { terser } from "rollup-plugin-terser";
+
+const production = !process.env.ROLLUP_WATCH;
 
 export default {
-  entry: "src/index.js",
-  dest: "public/build/main.js",
-  format: "iife",
-  sourceMap: "inline",
+  input: "src/index.js",
+  output: {
+    sourcemap: true,
+    format: "iife",
+    name: "app",
+    file: "public/build/bundle.js",
+  },
   plugins: [
     resolve({
       jsnext: true,
       main: true,
       browser: true,
     }),
+    commonjs(),
     babel({
       extensions: [".js"],
       exclude: ["node_modules/@babel/**"],
@@ -24,5 +32,6 @@ export default {
         ],
       ],
     }),
+    production && terser(),
   ],
 };
