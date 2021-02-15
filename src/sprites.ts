@@ -1,10 +1,5 @@
-import setUpGame from "pixelize-engine";
+import { animation } from "pixelize-engine";
 
-const game = setUpGame(window);
-
-game.addSprite(
-  "mark",
+export const questionMark = animation(
   "........................#786400.#786400.#786400.#786400.#786400..#786400.#786400.#786400.#786400.#786400.#786400.#786400..#786400.#786400........................"
 );
-
-export default game;
